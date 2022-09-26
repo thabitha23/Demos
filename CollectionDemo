@@ -1,0 +1,45 @@
+import java.util.ArrayList;
+public class CollectionDemo {
+
+	public static void main(String[] args) throws Exception {
+ 
+		Collection obj = new ArrayList();
+		obj.add(5);
+		obj.add(2);
+		obj.add(3);
+		obj.add(7);
+		
+		Iterator it = obj.iterator();
+		
+		while (it.hasNext()) {
+			System.out.println(it.next());
+		}
+	
+		//LIST
+		List<Integer> obj1 = new ArrayList<>();
+		obj1.add(5);
+		obj1.add(2);
+		obj1.add(3);
+		obj1.add(1,7);
+		
+		System.out.println("List:  ");
+
+		for (Object o: obj1) {
+			System.out.println(o);
+		}
+		
+		//Collections Class
+		Collections.sort(obj1);
+		//Collections.reverse(obj1);
+
+		System.out.println("Sorted List:  ");
+
+		for (Object o: obj1) {
+			System.out.println(o);
+		}
+		
+ 		
+		
+	}
+
+}
