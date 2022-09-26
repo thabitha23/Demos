@@ -1,0 +1,45 @@
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
+
+class Student implements Comparable<Student>{
+	int rollno, marks;
+	String name;
+	public Student(int rollno, String name,int marks ) {
+		super();
+		this.rollno = rollno;
+		this.marks = marks;
+		this.name = name;
+	}
+	@Override
+	public String toString() {
+		return "Student [rollno=" + rollno + ", marks=" + marks + ", name=" + name + "]";
+	}
+	
+	public int compareTo(Student s) {
+		return rollno>s.rollno?1:-1;
+	}
+ 
+	
+}
+
+public class ComparableDemo {
+
+	public static void main(String[] args) throws Exception {
+ 
+		List <Student> studs = new ArrayList<>();
+		
+		studs.add(new Student(23,"Tabitha",98));
+		studs.add(new Student(25,"Veronica",96));
+		studs.add(new Student(24,"Esther",99));
+		
+		Collections.sort(studs);
+		Collections.reverse(studs);
+		
+		for (Student s: studs) {
+			System.out.println(s);
+		}
+		
+	}
+
+}
